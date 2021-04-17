@@ -5,10 +5,6 @@ import altair as alt
 import matplotlib.pyplot as plt
 import plotly.figure_factory as ff
 
-st.set_page_config(
-    page_title="DS-Streamlit-Class", page_icon=":sunglasses:",
-)
-
 "# In this section we will try to explore ways to display our data"
 
 # Let’s add a title to test things out
