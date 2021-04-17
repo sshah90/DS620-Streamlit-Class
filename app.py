@@ -234,7 +234,7 @@ def user_input():
 # let's add sidebar so that we can layout our app
 option = st.sidebar.selectbox(
     "Which Level would you like to choose?",
-    ["Display your data", "User Inputs", "App", "Bonus"],
+    ["Display your data", "User Inputs", "App"],
 )
 
 st.sidebar.markdown(f"You selected: {option}")
