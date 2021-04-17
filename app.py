@@ -8,7 +8,7 @@ import altair as alt
 import matplotlib.pyplot as plt
 import plotly.figure_factory as ff
 
-from datetime import time,datetime
+from datetime import time,datetime,date
 
 st.set_page_config(
     page_title="DS-Streamlit-Class", page_icon=":sunglasses:",
