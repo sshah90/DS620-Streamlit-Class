@@ -222,10 +222,13 @@ def user_input():
     else:
         st.write('Goodbye')
 
+    "Display a date input widget with `st.date_input`"
+    d = st.date_input("When's your birthday", date(2019, 7, 6))
+    st.write("Your birthday is:", d)
+
     """
     ## **Explore following user input functionality our own**
     - number_input
-    - date_input
     - time_input
     - file_uploader
     - color_picker
