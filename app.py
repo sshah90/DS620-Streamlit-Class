@@ -8,7 +8,7 @@ import altair as alt
 import matplotlib.pyplot as plt
 import plotly.figure_factory as ff
 
-from datetime import time,datetime
+from datetime import time,datetime,date
 
 st.set_page_config(
     page_title="DS-Streamlit-Class", page_icon=":sunglasses:",
@@ -222,10 +222,13 @@ def user_input():
     else:
         st.write('Goodbye')
 
+    "Display a date input widget with `st.date_input`"
+    d = st.date_input("When's your birthday", date(2019, 7, 6))
+    st.write("Your birthday is:", d)
+
     """
     ## **Explore following user input functionality our own**
     - number_input
-    - date_input
     - time_input
     - file_uploader
     - color_picker

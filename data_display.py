@@ -5,27 +5,23 @@ import altair as alt
 import matplotlib.pyplot as plt
 import plotly.figure_factory as ff
 
-st.set_page_config(
-    page_title="DS-Streamlit-Class", page_icon=":sunglasses:",
-)
-
-"# In this section we will try to explore ways to display our data"
-
 # Let’s add a title to test things out
 st.title("My Cool Streamlit App!!!")
 
 # Let's write something
 # write any text
 st.write("Here's our first attempt at using data to create a table:")
+
 # write dataframes
 st.write(
     pd.DataFrame({"first column": [1, 2, 3, 4], "second column": [10, 20, 30, 40]})
 )
+
 # write JSON
 st.write({"Name": "John", "Country": "USA"})
 
 # Emojis are love!
-st.write("Display some cool emojis :sunglasses:")
+st.write("Display some cool emojis :wrench:")
 
 # st.write accepts chart objects too!
 df2 = pd.DataFrame(np.random.randn(200, 3), columns=["a", "b", "c"])
@@ -34,19 +30,17 @@ c = (
     .mark_circle()
     .encode(x="a", y="b", size="c", color="c", tooltip=["a", "b", "c"])
 )
-# st.write(c)
+st.write(c)
 
-# you can also use
-st.text("you can also use st.text or st.markdown as well")
+# var = "DS-650"
+# st.write(f"today we are having class with {var}")
 
-# let me showcase some Magic!
 """
 # My Cool Streamlit App!!!
 Here's our first attempt at using data to create a table:
 """
 
 df = pd.DataFrame({"first column": [1, 2, 3, 4], "second column": [10, 20, 30, 40]})
-# df
 
 # you can also use st.dataframe and st.table
 "Display a df with `st.dataframe(df)` and `st.table(df)`"
@@ -56,9 +50,12 @@ st.table(df)
 # let's display some charts
 "let's display charts"
 chart_data = pd.DataFrame(np.random.randn(50, 3), columns=["a", "b", "c"])
+chart_data
+
 # line_chart
 "Display a line chart figure with `st.line_chart`"
 st.line_chart(chart_data)
+
 # area_chart
 "Display a area chart figure with `st.area_chart`"
 st.area_chart(chart_data)
@@ -71,6 +68,7 @@ st.bar_chart(chart_data)
 map_data = pd.DataFrame(
     np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4], columns=["lat", "lon"]
 )
+
 "Display a map figure with `st.map`"
 st.map(map_data)
 
@@ -79,9 +77,6 @@ arr = np.random.normal(1, 1, size=100)
 fig, ax = plt.subplots()
 ax.hist(arr, bins=20)
 st.pyplot(fig)
-
-"Display a chart using the Altair library with `st.altair_chart`"
-st.altair_chart(c, use_container_width=True)
 
 "Display an interactive Plotly chart."
 
@@ -99,14 +94,3 @@ group_labels = ["Group 1", "Group 2", "Group 3"]
 fig = ff.create_distplot(hist_data, group_labels, bin_size=[0.1, 0.25, 0.5])
 
 st.plotly_chart(fig, use_container_width=True)
-
-"""
-## **Explore following user data disply functionality our own**
-- header
-- subheader
-- markdown
-- latex
-- image
-- audio
-- video
-"""
