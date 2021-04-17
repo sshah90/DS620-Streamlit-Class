@@ -68,6 +68,10 @@ st.write('Sentiment:', txt)
 # d = st.date_input("When's your birthday (dates are in UTC)", date(2021, 7, 6))
 # st.write("Your birthday is:", d)
 
+"Display a date input widget with `st.date_input`"
+d = st.date_input("When's your birthday", date(2019, 7, 6))
+st.write("Your birthday is:", d)
+
 """
 ## **Explore following user input functionality our own**
 - number_input
